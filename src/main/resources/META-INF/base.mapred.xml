@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapred>
+    <!-- profile -->
+    <baseId>01328a8cc2f302667d42398eb0e75784</baseId>
+    <projectId>4063</projectId>
+    <resourceName>user_feature</resourceName>
+    <idePath>工作流/yuexin</idePath>
+
+    <!-- classes -->
+    <jobLauncher>my.group.user_feature.JobLauncher</jobLauncher>
+    <mapper>my.group.user_feature.MyMapper</mapper>
+    <reducer>my.group.user_feature.MyReducer</reducer>
+   <!--  <combiner>my.group.user_feature.MyCombiner</combiner>  --> 
+
+
+    <!--task-->
+    <mapOutputKey>word:string</mapOutputKey>
+    <mapOutputValue>cnt:bigint</mapOutputValue>
+    <!--
+    <partitionColumns>col1,col2</partitionColumns>
+    <outputKeySortColumns>col1,col2</outputKeySortColumns>
+    <outputKeySortOrders>ASC,DESC</outputKeySortOrders>
+    <outputGroupingColumns>col1,col2</outputGroupingColumns>
+    <numReduceTask>8</numReduceTask>
+    <memoryForMapTask>2048</memoryForMapTask>
+    <memoryForReduceTask>2048</memoryForReduceTask>
+    -->
+<numReduceTask>1</numReduceTask>
+    <!-- tables -->
+    <inputTables>
+        <table>
+            <name>blog_data_train</name>
+            <partitions>
+              
+            </partitions>
+        </table>
+    </inputTables>
+    <outputTable>
+        <name>blog_zhuan_ping_zan</name>
+       
+    </outputTable>
+</mapred>
