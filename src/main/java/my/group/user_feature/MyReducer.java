@@ -20,14 +20,17 @@ public class MyReducer implements Reducer {
         long zhuan = 0,ping=0,zan=0;
         while (values.hasNext()) {
             Record val = values.next();
-            zhuan += val.getBigint(0);
-            ping += val.getBigint(1);
-            zan += val.getBigint(2);
+            if(val.getBigint(0)==0)
+            zhuan += 1;
+            if(val.getBigint(0)==1)
+            ping += 1;
+            if(val.getBigint(0)==2)
+            zan += 1;
             
         }
-        result.set(0, zhuan);
-        result.set(1, ping);
-        result.set(2, zan);
+        result.setBigint(0, zhuan);
+      //  result.setBigint(1, ping);
+      //  result.setBigint(2, zan);
         context.write(key, result);
     }
 

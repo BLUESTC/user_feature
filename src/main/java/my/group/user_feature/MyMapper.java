@@ -23,24 +23,24 @@ public class MyMapper implements Mapper {
         String mid=record.getString(3);
         String action=record.getString(5);
         
-        one.setBigint(0, 0L);
-        one.setBigint(1, 0L);
-        one.setBigint(2, 0L);
+//        one.setBigint(0, 0L);
+//        one.setBigint(1, 0L);
+//        one.setBigint(2, 0L);
         
-        
-        if(action.equals(1)){
+        one.setBigint(0,(long) Integer.parseInt(action));
+        if(action.equals("1")){
         	one.setBigint(0, 1L);
         }
-        else if(action.equals(2)){
-        	one.setBigint(1, 1L);
+        else if(action.equals("2")){
+        	one.setBigint(0, 2L);
         }
-        else if(action.equals(3)){
-        	one.setBigint(2, 1L);
-        }
+       else if(action.equals("3")){
+        	one.setBigint(0, 3L);
+       }
+       
         
         
-        word.setString(0, uid);
-        word.setString(1, mid);
+        word.setString(0, mid);
 
         context.write(word, one);
     }
