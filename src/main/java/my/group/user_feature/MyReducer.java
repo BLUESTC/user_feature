@@ -1,10 +1,11 @@
 package my.group.user_feature;
 
+import java.io.IOException;
+import java.util.Iterator;
+
 import com.aliyun.odps.data.Record;
 import com.aliyun.odps.mapred.Reducer;
 
-import java.io.IOException;
-import java.util.Iterator;
 
 /**
  * Reducer模板。请用真实逻辑替换模板内容
@@ -26,11 +27,13 @@ public class MyReducer implements Reducer {
             ping += 1;
             if(val.getBigint(0)==2)
             zan += 1;
-            
         }
-        result.setBigint(0, zhuan);
-      //  result.setBigint(1, ping);
-      //  result.setBigint(2, zan);
+//        HashMap<String,Long> map=new HashMap<String, Long>();
+//        map.put("repost", zhuan);
+//        map.put("comment", ping);
+//        map.put("like", zan);
+        result.set(0, "{repost:"+zhuan+",comment:"+ping+",like:"+zan+"}");
+//        result.setBigint(0, zhuan);
         context.write(key, result);
     }
 

@@ -28,18 +28,18 @@ public class MyMapper implements Mapper {
 //        one.setBigint(2, 0L);
         
         one.setBigint(0,(long) Integer.parseInt(action));
-        if(action.equals("1")){
-        	one.setBigint(0, 1L);
-        }
-        else if(action.equals("2")){
-        	one.setBigint(0, 2L);
-        }
-       else if(action.equals("3")){
-        	one.setBigint(0, 3L);
-       }
-       
-        
-        
+//        if(action.equals("1")){
+//        	one.setBigint(0, 1L);
+//        }
+//        else if(action.equals("2")){
+//        	one.setBigint(0, 2L);
+//        }
+//       else if(action.equals("3")){
+//        	one.setBigint(0, 3L);
+//       }
+//       
+//        
+//        
         word.setString(0, mid);
 
         context.write(word, one);

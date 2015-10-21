@@ -30,7 +30,6 @@ import java.util.regex.Pattern;
  * 注意：此文件只供本地测试使用，所有修改不会反映到最终线上实际执行的JobLauncher。
  * 所有对mapreduce进行的配置请在main/resources/META-INF/base.mapred.xml中完成
  */
-@SuppressWarnings("rawtypes")
 public class JobLauncher {
     /** liuyajun gaidong 
      * 表示ODPS表的pojo类
