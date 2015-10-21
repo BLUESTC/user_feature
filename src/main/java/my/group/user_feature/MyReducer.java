@@ -32,9 +32,9 @@ public class MyReducer implements Reducer {
 //        map.put("repost", zhuan);
 //        map.put("comment", ping);
 //        map.put("like", zan);
-        result.set(0, "{repost:"+zhuan+",comment:"+ping+",like:"+zan+"}");
+//        result.set(0, "{repost:"+zhuan+",comment:"+ping+",like:"+zan+"}");
 //        result.setBigint(0, zhuan);
-        context.write(key, result);
+        context.write(key, "{repost:"+zhuan+",comment:"+ping+",like:"+zan+"}");
     }
 
     public void cleanup(TaskContext arg0) throws IOException {
