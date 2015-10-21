@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
  */
 @SuppressWarnings("rawtypes")
 public class JobLauncher {
-    /**
+    /** liuyajun gaidong 
      * 表示ODPS表的pojo类
      */
     public static class OdpsTableInfo {
