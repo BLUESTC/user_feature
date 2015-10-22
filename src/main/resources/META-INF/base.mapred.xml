@@ -3,7 +3,7 @@
     <!-- profile -->
     <baseId>01328a8cc2f302667d42398eb0e75784</baseId>
     <projectId>4063</projectId>
-    <resourceName>user_feature</resourceName>
+    <resourceName>user_feature2</resourceName>
     <idePath>工作流/yuexin</idePath>
 
     <!-- classes -->
@@ -15,7 +15,7 @@
 
     <!--task-->
     <mapOutputKey>word:string</mapOutputKey>
-    <mapOutputValue>cnt:bigint</mapOutputValue>
+    <mapOutputValue>cnt:string</mapOutputValue>
     <!--
     <partitionColumns>col1,col2</partitionColumns>
     <outputKeySortColumns>col1,col2</outputKeySortColumns>
@@ -32,14 +32,14 @@
     <!-- tables -->
     <inputTables>
         <table>
-            <name>action_data_train</name>
+            <name>blog_data_train</name>
             <partitions>
               
             </partitions>
         </table>
     </inputTables>
     <outputTable>
-        <name>blog_zhuan_ping_zan</name>
+        <name>bowen_train</name>
        
     </outputTable>
 </mapred>
