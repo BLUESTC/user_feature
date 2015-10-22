@@ -27,19 +27,19 @@ public class MyMapper implements Mapper {
         
         JsonObject json=new JsonObject();
         json.addProperty("uid", uid);
-        json.addProperty("blog", status);
+//        json.addProperty("blog", status);
         json.addProperty("hasTopic", status.contains("#")?1:0);
         json.addProperty("hasUrl", status.matches(".*(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?.*")?1:0);
         json.addProperty("hasAt", status.contains("@")?1:0);
         json.addProperty("hasUrl", status.matches(".*\\[\\da-z+\\].*")?1:0);
         
 
-        Matcher m=sP.matcher(status);
-        int ssSum=0;
-        while(m.find()){
-        	ssSum++;
-        }
-        json.addProperty("specialSigSum", ssSum);
+//        Matcher m=sP.matcher(status);
+//        int ssSum=0;
+//        while(m.find()){
+//        	ssSum++;
+//        }
+//        json.addProperty("specialSigSum", ssSum);
 
         
         key.setString(0, mid);

@@ -34,8 +34,9 @@ public class MyReducer implements Reducer {
 ////        map.put("comment", ping);
 ////        map.put("like", zan);
     	while(values.hasNext()){
+    		Record val = values.next();
             result.set(0, key.getString(0));
-            result.set(1, values.next().getString(0));
+            result.set(1, val.getString(0));
             context.write(result);
     	}
 
